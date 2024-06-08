@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Login System</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <div class="container" id="signupForm">
+    <h2>Smart Login System</h2>
+    <div id="signupError" class="error"></div>
+    <input type="text" id="name" placeholder="Enter your name" class="form-control">
+    <input type="email" id="email" placeholder="Enter your email" class="form-control">
+    <input type="password" id="password" placeholder="Enter password" class="form-control">
+    <button onclick="signup()" class="btn btn-outline-info">Sign Up</button>
+    <p>You have an account? <span class="toggle-form" onclick="toggleForm()">Sign in</span></p>
+  </div>
+
+  <div class="container" id="loginForm" style="display: none;">
+    <h2>Smart Login System</h2>
+    <div id="loginError" class="error"></div>
+    <input type="email" id="loginEmail" placeholder="Enter your email" class="form-control">
+    <input type="password" id="loginPassword" placeholder="Enter your password" class="form-control">
+    <button onclick="login()" class="btn btn-outline-info">Login</button>
+    <p>Don't have an account? <span class="toggle-form" onclick="toggleForm()">Sign Up</span></p>
+  </div>
+
+  <div class="container" id="homePage" style="display: none;">
+    <h1 class="text-info">Welcome <span id="userName" class="text-info"></span> <i class="fa-solid fa-heart-circle-check text-info"></i></h1>
+    <button onclick="logout()" class="btn btn-outline-info">Logout</button>
+  </div>
+
+
+  <script src="js/main.js"></script>
+  <script src="js/all.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
