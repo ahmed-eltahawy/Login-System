@@ -41,9 +41,6 @@
       var  user = users.find(function(user) { return user.email === email && user.password === password; });
 
       if (user) {
-        //  تعيين  المستخدم  المسجل  دخوله  في  localStorage
-        localStorage.setItem("loggedInUser", JSON.stringify(user));
-
         //  تحديث  صفحة  home  باسم  المستخدم
         document.getElementById("userName").textContent = user.name;
 
@@ -61,7 +58,6 @@
     };
 
  var logout = function() {
-      localStorage.removeItem("loggedInUser");
       document.getElementById("homePage").style.display = "none";
       document.getElementById("loginForm").style.display = "block"; //  إظهار  نموذج  تسجيل  الدخول  بشكل  افتراضي
     };
